@@ -40,7 +40,7 @@ const Tasks = (props) => {
 
             {editId === e.id ? (
               <TextField
-                sx={{ marginLeft: "80px" }}
+                sx={{width: '70%'}}
                 value={editValue}
                 onChange={(event) => handleChangeEdit(event.target.value)}
                 onBlur={() => handleSaveEdit(e.id)}
