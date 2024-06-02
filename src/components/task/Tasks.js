@@ -54,7 +54,7 @@ const Tasks = (props) => {
               <div onClick={() => handleEdit(e.id)}>
                 <img
                   id="edit-button"
-                  src="../../pencil pixel.png"
+                  src={`${process.env.PUBLIC_URL}/pencil pixel.png`}
                   widht="30px"
                   heigth="30px"
                   alt="edit button"
@@ -63,7 +63,7 @@ const Tasks = (props) => {
               <div onClick={() => handleRemove(e.id)}>
                 <img
                   id="delete-button"
-                  src="../../bigger pixel bin.png"
+                  src={`${process.env.PUBLIC_URL}/bigger pixel bin.png`}
                   width="30px"
                   height="30px"
                   alt="delete button"

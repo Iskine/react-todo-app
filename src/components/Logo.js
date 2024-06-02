@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <>
       <Logos>
-        <img alt="images" src="../../logo-toy.png" width="50px" height="45px" />
+        <img alt="logo" src={`${process.env.PUBLIC_URL}/logo-toy.png`} width="50px" height="45px" />
       </Logos>
     </>
   );

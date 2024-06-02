@@ -47,7 +47,7 @@ const AddTasks = (props) => {
           onClick={() => handleAddTask(input)}
         >
           <img
-            src="../../pixel plus sign.png"
+           src={`${process.env.PUBLIC_URL}/pixel plus sign.png`}
             width="20px"
             height="20px"
             alt="add task"
