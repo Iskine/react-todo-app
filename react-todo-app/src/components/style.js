@@ -51,7 +51,7 @@ export const AddText = styled(TextField)({
 });
 
 export const Task = styled("div")({
-  minWidth: "40vw",
+  width: "40vw",
   height: "50px",
   border: "2px solid #FF6666",
   backgroundColor: "#FFEADD",
@@ -93,7 +93,7 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: "#FCAEAE",
     },
   },
-  taskCircle: {
+  notDoneTaskCircle: {
     position: "absolute",
     margin: "10px 20px 10px 20px",
     height: "30px",
@@ -108,7 +108,24 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     "&:hover": {
       cursor: "pointer",
-      backgroundColor: "#51FD00",
+      backgroundColor: "#11AD00",
+    },
+  },
+  doneTaskCircle: {
+    position: "absolute",
+    margin: "10px 20px 10px 20px",
+    height: "30px",
+    width: "30px",
+    backgroundColor: "#51FD00",
+    border: "2px solid #FF6666",
+    borderRadius: "50%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "30px",
+    fontWeight: "600",
+    "&:hover": {
+      cursor: "pointer",
     },
   },
 }));
