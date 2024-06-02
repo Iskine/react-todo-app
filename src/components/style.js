@@ -1,4 +1,4 @@
-import { borderBottom, styled } from "@mui/system";
+import { styled } from "@mui/system";
 import { makeStyles } from "@mui/styles";
 import { TextField } from "@mui/material";
 
@@ -51,7 +51,7 @@ export const AddText = styled(TextField)({
 });
 
 export const Task = styled("div")({
-  width: "40vw",
+  width: "40%",
   height: "50px",
   border: "2px solid #FF6666",
   backgroundColor: "#FFEADD",
@@ -94,10 +94,10 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   notDoneTaskCircle: {
-    position: "absolute",
+    // position: "absolute",
     margin: "10px 20px 10px 20px",
     height: "30px",
-    width: "30px",
+    minWidth: "30px",
     backgroundColor: "transparent",
     border: "2px solid #FF6666",
     borderRadius: "50%",
@@ -112,10 +112,10 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   doneTaskCircle: {
-    position: "absolute",
+    // position: "absolute",
     margin: "10px 20px 10px 20px",
     height: "30px",
-    width: "30px",
+    minWidth: "30px",
     backgroundColor: "#51FD00",
     border: "2px solid #FF6666",
     borderRadius: "50%",

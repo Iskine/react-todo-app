@@ -1,6 +1,8 @@
-import { Boxes, Circle } from "./style";
+import { Boxes, Circle } from "../style";
 
 const Box = (props) => {
+  const { list, countTask } = props;
+
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Boxes>
@@ -11,12 +13,12 @@ const Box = (props) => {
             alignItems: "center",
           }}
         >
-          <p>TODO DONE </p>
-
-          <p style={{ fontSize: "20px", margin: "0" }}>Keep Up </p>
+          <p>TODO DONE</p>
+          <p style={{ fontSize: "20px", margin: "0" }}>Keep Up</p>
         </div>
-
-        <Circle> 1/4 </Circle>
+        <Circle>
+          {countTask}/{list.length}
+        </Circle>
       </Boxes>
     </div>
   );

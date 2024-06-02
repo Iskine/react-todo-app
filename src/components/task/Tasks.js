@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Task, useStyles } from "../style";
 import { TextField } from "@mui/material";
 
@@ -6,7 +5,7 @@ const Tasks = (props) => {
   const classes = useStyles();
 
   const {
-    name,
+    list,
     handleRemove,
     handleEdit,
     editId,
@@ -15,9 +14,10 @@ const Tasks = (props) => {
     handleChangeEdit,
     handleDone,
   } = props;
+
   return (
     <>
-      {name.map((e) => (
+      {list.map((e) => (
         <div
           style={{
             display: "flex",
@@ -40,16 +40,14 @@ const Tasks = (props) => {
 
             {editId === e.id ? (
               <TextField
-              sx={{marginLeft:"80px"}}
+                sx={{ marginLeft: "80px" }}
                 value={editValue}
                 onChange={(event) => handleChangeEdit(event.target.value)}
                 onBlur={() => handleSaveEdit(e.id)}
                 autoFocus
               />
             ) : (
-              <h2 style={{ color: "#101621", width: "40%", margin: "0 70px" }}>
-                {e.todo}
-              </h2>
+              <h2 style={{ color: "#101621", width: "100%" }}>{e.todo}</h2>
             )}
 
             <div style={{ display: "flex", gap: "20px", marginRight: "20px" }}>
